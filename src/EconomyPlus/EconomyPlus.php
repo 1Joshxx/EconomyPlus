@@ -42,9 +42,9 @@ class EconomyPlus extends PluginBase implements Listener{
 
   public $imported;
 
-  public $shop = C::GRAY . "[" . C::GREEN . "Shop" . C::GRAY . "]";
+  public $shop = C::GRAY . "[" . C::GREEN . "+" . C::GRAY . "]";
 
-  public $sell = C::GRAY . "[" . C::AQUA . "Sell" . C::GRAY . "]";
+  public $sell = C::GRAY . "[" . C::AQUA . "-" . C::GRAY . "]";
 
   public $perm = C::GRAY . "[" . C::RED . "Perm" . C::GRAY . "]";
 
@@ -147,7 +147,7 @@ class EconomyPlus extends PluginBase implements Listener{
   
 
   public function registerCommands(){
-    if($this->isCommandEnabled("bal") == true){
+    if($this->isCommandEnabled("mymoney") == true){
       $this->getServer()->getCommandMap()->register("bal", new BalanceCommand($this));
     }
     if($this->isCommandEnabled("addmoney") == true){
